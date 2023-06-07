@@ -28,13 +28,13 @@ function App() {
           <div className="border border-green-500">
             <h1>side section</h1>
           </div>
-          <div className="flex flex-col border border-red-500">
+          <div className="flex flex-col w-full border border-red-500">
             <h1>main body</h1>
 
               {tileData.map((tileArrayData, index) => (
-                <ul key={index}>
+                <ul key={index} className="flex flex-row justify-between">
                   {tileArrayData.map(tile => (
-                    <l1 key={tile.id}>{tile.name}</l1>
+                    <l1 key={tile.id} className="tile m-5">{tile.name}</l1>
                   ))}
                 </ul>
               ))}
